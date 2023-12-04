@@ -1,15 +1,44 @@
+using Business.MappingProfiles.Products;
+using Business.Services.Abstract;
+using Business.Services.Concrete;
+using Common.Entities;
+using DataAccess.Context;
+using DataAccess.Repositories.Abstract;
+using DataAccess.Repositories.Concrete;
+using DataAccess.UnitofWork;
+using Microsoft.AspNetCore.Identity;
+using Microsoft.EntityFrameworkCore;
+using Presentation.Middleewares;
+
 var builder = WebApplication.CreateBuilder(args);
 
-// Add services to the container.
-
+#region Builder Configuration
 builder.Services.AddControllers();
-// Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
+builder.Services.AddScoped<IProductService,ProductService>();
+builder.Services.AddScoped<IProductRepository,ProductRepository>();
+builder.Services.AddScoped<IUnitofWork,UnitofWork>();
+builder.Services.AddAutoMapper(x =>
+{
+    x.AddProfile(new ProductMappingProfile());
+});
+builder.Services.AddDbContext<AppDbContext>(x => x.UseSqlServer(builder.Configuration.GetConnectionString("Default"), x => x.MigrationsAssembly(nameof(DataAccess))));
+builder.Services.AddIdentity<User,IdentityRole>(x=>
+{
+    x.Password.RequiredUniqueChars = 0;
+    x.Password.RequireNonAlphanumeric = false;
+    x.Password.RequireUppercase = false;
+    x.Password.RequireLowercase = false;
+    x.Password.RequireDigit = false;
+}).AddEntityFrameworkStores<AppDbContext>();
+
+#endregion
 
 var app = builder.Build();
 
-// Configure the HTTP request pipeline.
+#region App Config
+
 if (app.Environment.IsDevelopment())
 {
     app.UseSwagger();
@@ -21,5 +50,8 @@ app.UseHttpsRedirection();
 app.UseAuthorization();
 
 app.MapControllers();
+app.UseMiddleware<CustomExceptionMiddleware>();
+#endregion
+
 
 app.Run();

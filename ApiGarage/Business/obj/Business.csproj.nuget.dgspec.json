@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\ASUS\\Desktop\\ApiGarage\\Business\\Business.csproj": {}
+    "C:\\Users\\ASUS\\Desktop\\API first task\\ApiGarage\\Business\\Business.csproj": {}
   },
   "projects": {
-    "C:\\Users\\ASUS\\Desktop\\ApiGarage\\Business\\Business.csproj": {
+    "C:\\Users\\ASUS\\Desktop\\API first task\\ApiGarage\\Business\\Business.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\ASUS\\Desktop\\ApiGarage\\Business\\Business.csproj",
+        "projectUniqueName": "C:\\Users\\ASUS\\Desktop\\API first task\\ApiGarage\\Business\\Business.csproj",
         "projectName": "Business",
-        "projectPath": "C:\\Users\\ASUS\\Desktop\\ApiGarage\\Business\\Business.csproj",
+        "projectPath": "C:\\Users\\ASUS\\Desktop\\API first task\\ApiGarage\\Business\\Business.csproj",
         "packagesPath": "C:\\Users\\ASUS\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\ASUS\\Desktop\\ApiGarage\\Business\\obj\\",
+        "outputPath": "C:\\Users\\ASUS\\Desktop\\API first task\\ApiGarage\\Business\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\ASUS\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -28,8 +28,8 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\Users\\ASUS\\Desktop\\ApiGarage\\DataAccess\\DataAccess.csproj": {
-                "projectPath": "C:\\Users\\ASUS\\Desktop\\ApiGarage\\DataAccess\\DataAccess.csproj"
+              "C:\\Users\\ASUS\\Desktop\\API first task\\ApiGarage\\DataAccess\\DataAccess.csproj": {
+                "projectPath": "C:\\Users\\ASUS\\Desktop\\API first task\\ApiGarage\\DataAccess\\DataAccess.csproj"
               }
             }
           }
@@ -43,6 +43,16 @@
       "frameworks": {
         "net6.0": {
           "targetAlias": "net6.0",
+          "dependencies": {
+            "AutoMapper.Extensions.Microsoft.DependencyInjection": {
+              "target": "Package",
+              "version": "[12.0.1, )"
+            },
+            "FluentValidation": {
+              "target": "Package",
+              "version": "[11.8.1, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
@@ -63,14 +73,14 @@
         }
       }
     },
-    "C:\\Users\\ASUS\\Desktop\\ApiGarage\\Common\\Common.csproj": {
+    "C:\\Users\\ASUS\\Desktop\\API first task\\ApiGarage\\Common\\Common.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\ASUS\\Desktop\\ApiGarage\\Common\\Common.csproj",
+        "projectUniqueName": "C:\\Users\\ASUS\\Desktop\\API first task\\ApiGarage\\Common\\Common.csproj",
         "projectName": "Common",
-        "projectPath": "C:\\Users\\ASUS\\Desktop\\ApiGarage\\Common\\Common.csproj",
+        "projectPath": "C:\\Users\\ASUS\\Desktop\\API first task\\ApiGarage\\Common\\Common.csproj",
         "packagesPath": "C:\\Users\\ASUS\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\ASUS\\Desktop\\ApiGarage\\Common\\obj\\",
+        "outputPath": "C:\\Users\\ASUS\\Desktop\\API first task\\ApiGarage\\Common\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\ASUS\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -124,14 +134,14 @@
         }
       }
     },
-    "C:\\Users\\ASUS\\Desktop\\ApiGarage\\DataAccess\\DataAccess.csproj": {
+    "C:\\Users\\ASUS\\Desktop\\API first task\\ApiGarage\\DataAccess\\DataAccess.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\ASUS\\Desktop\\ApiGarage\\DataAccess\\DataAccess.csproj",
+        "projectUniqueName": "C:\\Users\\ASUS\\Desktop\\API first task\\ApiGarage\\DataAccess\\DataAccess.csproj",
         "projectName": "DataAccess",
-        "projectPath": "C:\\Users\\ASUS\\Desktop\\ApiGarage\\DataAccess\\DataAccess.csproj",
+        "projectPath": "C:\\Users\\ASUS\\Desktop\\API first task\\ApiGarage\\DataAccess\\DataAccess.csproj",
         "packagesPath": "C:\\Users\\ASUS\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\ASUS\\Desktop\\ApiGarage\\DataAccess\\obj\\",
+        "outputPath": "C:\\Users\\ASUS\\Desktop\\API first task\\ApiGarage\\DataAccess\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\ASUS\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -148,8 +158,8 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\Users\\ASUS\\Desktop\\ApiGarage\\Common\\Common.csproj": {
-                "projectPath": "C:\\Users\\ASUS\\Desktop\\ApiGarage\\Common\\Common.csproj"
+              "C:\\Users\\ASUS\\Desktop\\API first task\\ApiGarage\\Common\\Common.csproj": {
+                "projectPath": "C:\\Users\\ASUS\\Desktop\\API first task\\ApiGarage\\Common\\Common.csproj"
               }
             }
           }
@@ -163,6 +173,12 @@
       "frameworks": {
         "net6.0": {
           "targetAlias": "net6.0",
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[6.0.25, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",

@@ -824,11 +824,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\ASUS\\Desktop\\ApiGarage\\Common\\Common.csproj",
+      "projectUniqueName": "C:\\Users\\ASUS\\Desktop\\API first task\\ApiGarage\\Common\\Common.csproj",
       "projectName": "Common",
-      "projectPath": "C:\\Users\\ASUS\\Desktop\\ApiGarage\\Common\\Common.csproj",
+      "projectPath": "C:\\Users\\ASUS\\Desktop\\API first task\\ApiGarage\\Common\\Common.csproj",
       "packagesPath": "C:\\Users\\ASUS\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\ASUS\\Desktop\\ApiGarage\\Common\\obj\\",
+      "outputPath": "C:\\Users\\ASUS\\Desktop\\API first task\\ApiGarage\\Common\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\ASUS\\AppData\\Roaming\\NuGet\\NuGet.Config",
