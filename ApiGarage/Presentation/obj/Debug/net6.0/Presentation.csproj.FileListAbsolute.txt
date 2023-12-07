@@ -80,3 +80,5 @@ C:\Users\ASUS\Desktop\API first task\ApiGarage\Presentation\obj\Debug\net6.0\ref
 C:\Users\ASUS\Desktop\API first task\ApiGarage\Presentation\bin\Debug\net6.0\FluentValidation.dll
 C:\Users\ASUS\Desktop\API first task\ApiGarage\Presentation\bin\Debug\net6.0\AutoMapper.dll
 C:\Users\ASUS\Desktop\API first task\ApiGarage\Presentation\bin\Debug\net6.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
+C:\Users\ASUS\Desktop\API first task\ApiGarage\Presentation\bin\Debug\net6.0\Presentation.xml
+C:\Users\ASUS\Desktop\API first task\ApiGarage\Presentation\obj\Debug\net6.0\Presentation.xml

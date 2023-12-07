@@ -1,4 +1,5 @@
 ﻿using Business.Exceptions;
+using Business.Services.Common;
 using System.Text.Json;
 
 namespace Presentation.Middleewares
@@ -28,11 +29,18 @@ namespace Presentation.Middleewares
         {
 
             context.Response.ContentType = "application/json";
+            Response response= new Response();
             switch (e)
             {
                 case ValidatorException ex:
+                    response.Errors= ex.Errors;
                     context.Response.StatusCode = StatusCodes.Status400BadRequest;
-                    await context.Response.WriteAsync(JsonSerializer.Serialize(ex.Errors));
+                    await context.Response.WriteAsync(JsonSerializer.Serialize(response));
+                    break;
+                case NotFoundException ex:
+                    response.Errors = ex.Errors;
+                    context.Response.StatusCode= StatusCodes.Status404NotFound;
+                    await context.Response.WriteAsync(JsonSerializer.Serialize(response));
                     break;
                 default:
                     break;

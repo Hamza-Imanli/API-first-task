@@ -1,5 +1,7 @@
 ﻿using Business.DTOs.Request;
+using Business.DTOs.Response;
 using Business.Services.Common;
+using Common.Entities;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,5 +13,9 @@ namespace Business.Services.Abstract
     public interface IProductService
     {
         Task<Response> CreateAsync(ProductCreateDto model);
+        Task<Response> DeleteAsync(int id);
+        Task<Response<List<ProductDto>>> getAllAsync();
+        Task<Response<ProductDto>> getAsync(int id);
+        Task<Response> UpdateAsync(int id, ProductUpdateDto model);
     }
 }

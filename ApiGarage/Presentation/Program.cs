@@ -15,7 +15,7 @@ var builder = WebApplication.CreateBuilder(args);
 #region Builder Configuration
 builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
-builder.Services.AddSwaggerGen();
+builder.Services.AddSwaggerGen(x=>x.IncludeXmlComments(Path.Combine(AppContext.BaseDirectory,"Presentation.xml")));
 builder.Services.AddScoped<IProductService,ProductService>();
 builder.Services.AddScoped<IProductRepository,ProductRepository>();
 builder.Services.AddScoped<IUnitofWork,UnitofWork>();

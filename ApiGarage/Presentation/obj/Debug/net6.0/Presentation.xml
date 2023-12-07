@@ -1,0 +1,34 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Presentation</name>
+    </assembly>
+    <members>
+        <member name="M:Presentation.Controllers.ProductController.CreateAsync(Business.DTOs.Request.ProductCreateDto)">
+            <summary>
+            Mehsulun yaradilmasi ucun
+            </summary>
+            <param name="model"></param>
+            <remarks>
+            <ul>
+            <li> Type : 0-New,1-Sold,2-Seld</li>
+            </ul>
+            </remarks>
+        </member>
+        <member name="M:Presentation.Controllers.ProductController.GetAsync(System.Int32)">
+            <summary>
+            Mueyyen id-li bir mehsulu tapmaq ucun
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Presentation.Controllers.ProductController.UpdateAsync(System.Int32,Business.DTOs.Request.ProductUpdateDto)">
+            <summary>
+            Mehsulu update etmek ucun
+            </summary>
+            <param name="id"></param>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>
